@@ -1,3 +1,4 @@
+# ~/.config/helix/languages.toml
 # Typescript
 [language-server.typescript-language-server]
 command = "typescript-language-server"
