@@ -1,3 +1,4 @@
+# ~/.config/helix/languages.toml
 # Go
 [language-server.gopls]
 command = "gopls"
