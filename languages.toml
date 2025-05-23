@@ -19,14 +19,3 @@ file-types = ["rs"]
 language-servers = ["rust-analyzer"]
 formatter = { command = "rustfmt" }
 auto-format = true
-
-[language.debugger]
-name = "lldb"
-transport = "stdio"
-command = "lldb"
- 
-[[language.debugger.templates]]
-name = "binary"
-request = "launch"
-completion = [ { name = "binary", completion = "filename" } ]
-args = { program = "{0}", initCommands = [ "command script import /opt/homebrew/Cellar/rust/1.87.0/lib/rustlib/etc/lldb_lookup.py", "command source -s 0 /opt/homebrew/Cellar/rust/1.87.0/lib/rustlib/etc/lldb_commands" ] }
