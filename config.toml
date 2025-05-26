@@ -16,10 +16,21 @@ hidden = false
 [editor.soft-wrap]
 enable = true
 
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.lsp]
+display-inlay-hints = true
+
 [keys.normal]
 A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 A-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
-C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+C-a = ["goto_file_start", "select_mode", "goto_last_line", "goto_line_end", "normal_mode"]
+y = ["yank", "yank_to_clipboard"]
+S-A-down = ["extend_to_line_bounds", "yank", "open_below", "normal_mode", "replace_with_yanked", "collapse_selection"]
+S-A-up = ["extend_to_line_bounds", "yank", "open_above", "normal_mode", "replace_with_yanked", "collapse_selection"]
 
 [keys.insert]
 C-s = ":w"
+S-A-down = ["normal_mode", "extend_to_line_bounds", "yank", "open_below", "replace_with_yanked", "collapse_selection"]
+S-A-up = ["normal_mode", "extend_to_line_bounds", "yank", "open_above", "replace_with_yanked", "collapse_selection"]
