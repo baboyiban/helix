@@ -20,3 +20,23 @@ file-types = ["rs"]
 language-servers = ["rust-analyzer"]
 formatter = { command = "rustfmt" }
 auto-format = true
+
+# Python
+[[language]]
+name = "python"
+
+[language.debugger]
+name = "debugpy"
+transport = "stdio"
+command = "python3"
+args = ["-m",  "debugpy.adapter"]
+
+[[language.debugger.templates]]
+name = "source"
+request = "launch"
+completion = [ { name = "entrypoint", completion = "filename", default = "." } ]
+args = { mode = "debug", program = "{0}"}
+
+[language.formatter]
+command = "black"
+args = ["--line-length", "88", "--quiet", "-"]
