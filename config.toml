@@ -5,124 +5,124 @@ theme = "onedark"
 
 [editor]
 # 기본 에디터 설정
-line-number = "relative"           # 상대 줄 번호 표시
-mouse = true                       # 마우스 지원 활성화
-auto-save = true                   # 자동 저장
-auto-completion = true             # 자동 완성 활성화
-completion-trigger-len = 2         # 2글자부터 자동완성 시작
-completion-replace = true          # 완성시 기존 텍스트 대체
-auto-format = true                 # 저장시 자동 포맷팅
-bufferline = "always"             # 버퍼 탭 항상 표시
-color-modes = true                # 모드별 색상 표시
-true-color = true                 # 트루컬러 지원
-rulers = []                # 80, 120 컬럼에 가이드라인 표시
-text-width = 80                   # 텍스트 폭 설정
+line-number = "relative"             # 상대 줄 번호 표시
+mouse = true                         # 마우스 지원 활성화
+auto-save = true                     # 자동 저장
+auto-completion = true               # 자동 완성 활성화
+completion-trigger-len = 2           # 2글자부터 자동완성 시작
+completion-replace = true            # 완성시 기존 텍스트 대체
+auto-format = true                   # 저장시 자동 포맷팅
+bufferline = "always"                # 버퍼 탭 항상 표시
+color-modes = true                   # 모드별 색상 표시
+true-color = true                    # 트루컬러 지원
+# rulers = [80, 120]                 # 80, 120 컬럼에 가이드라인 표시 (빈 배열이었으므로 주석 처리 또는 숫자 추가 고려)
+# text-width = 80                    # 텍스트 폭 설정 (기본값 또는 soft-wrap과 함께 고려)
 
 # 상태표시줄 설정
 [editor.statusline]
-left = ["mode", "spinner", "file-name", "file-modification-indicator"]  # 왼쪽: 모드, 스피너, 파일명, 수정 표시
-center = ["file-type"]                                                  # 중앙: 파일 타입
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending"]  # 오른쪽: 진단, 선택, 위치, 인코딩, 줄바꿈
-separator = "│"                   # 상태표시줄 구분자
+left = ["mode", "spinner", "file-name", "file-modification-indicator"] # 왼쪽: 모드, 스피너, 파일명, 수정 표시
+center = ["file-type"]                                                # 중앙: 파일 타입
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending"] # 오른쪽: 진단, 선택, 위치, 인코딩, 줄바꿈
+separator = "│"                      # 상태표시줄 구분자
 
 # 커서 모양 설정
 [editor.cursor-shape]
-insert = "bar"                    # 삽입 모드: 세로 막대
-normal = "block"                  # 일반 모드: 블록
-select = "underline"              # 선택 모드: 밑줄
+insert = "bar"                       # 삽입 모드: 세로 막대
+normal = "block"                     # 일반 모드: 블록
+select = "underline"                 # 선택 모드: 밑줄
 
 # 파일 선택기 설정
 [editor.file-picker]
-hidden = false                    # 숨긴 파일 표시
-max-depth = 5                     # 최대 탐색 깊이
-git-ignore = true                 # .gitignore 파일 적용
-git-global = true                 # 전역 git 설정 적용
+hidden = false                       # 숨긴 파일 표시
+max-depth = 5                        # 최대 탐색 깊이
+git-ignore = true                    # .gitignore 파일 적용
+git-global = true                    # 전역 git 설정 적용
 
 # 자동 괄호 매칭 설정
 [editor.auto-pairs]
-'(' = ')'                         # 소괄호 자동 매칭
-'{' = '}'                         # 중괄호 자동 매칭
-'[' = ']'                         # 대괄호 자동 매칭
-'"' = '"'                         # 큰따옴표 자동 매칭
-"'" = "'"                         # 작은따옴표 자동 매칭
-"`" = "`"                         # 백틱 자동 매칭
+'(' = ')'                            # 소괄호 자동 매칭
+'{' = '}'                            # 중괄호 자동 매칭
+'[' = ']'                            # 대괄호 자동 매칭
+'"' = '"'                            # 큰따옴표 자동 매칭
+"'" = "'"                            # 작은따옴표 자동 매칭
+# "`" = "`"                          # 백틱 자동 매칭 (사용 빈도가 낮다면 주석 처리 또는 삭제 고려)
 
 # 검색 설정
 [editor.search]
-smart-case = true                 # 대소문자 스마트 매칭 (소문자만 입력시 대소문자 무시)
-wrap-around = true                # 검색 시 처음/끝에서 순환
+smart-case = true                    # 대소문자 스마트 매칭 (소문자만 입력시 대소문자 무시)
+wrap-around = true                   # 검색 시 처음/끝에서 순환
 
-# 공백 문자 렌더링 설정
+# 공백 문자 렌더링 설정 (취향에 따라 유지 또는 삭제)
 [editor.whitespace.render]
-space = "none"                    # 스페이스 표시하지 않음
-tab = "all"                       # 탭 문자 모두 표시
-newline = "none"                  # 줄바꿈 문자 표시하지 않음
+space = "none"                       # 스페이스 표시하지 않음
+tab = "all"                          # 탭 문자 모두 표시
+newline = "none"                     # 줄바꿈 문자 표시하지 않음
 
 # 들여쓰기 가이드 설정
 [editor.indent-guides]
-render = true                     # 들여쓰기 가이드 표시
-character = "┊"                   # 가이드 문자
-skip-levels = 1                   # 건너뛸 레벨 수
+render = true                        # 들여쓰기 가이드 표시
+character = "┊"                      # 가이드 문자
+skip-levels = 1                      # 건너뛸 레벨 수
 
 # 소프트 랩 (줄 바꿈) 설정
 [editor.soft-wrap]
-enable = true                     # 소프트 랩 활성화
-max-wrap = 25                     # 최대 래핑 수
-max-indent-retain = 0             # 유지할 최대 들여쓰기
-wrap-indicator = "↪ "             # 래핑 표시 문자
+enable = true                        # 소프트 랩 활성화
+max-wrap = 25                        # 최대 래핑 수
+max-indent-retain = 0                # 유지할 최대 들여쓰기
+wrap-indicator = "↪ "                # 래핑 표시 문자
 
 # 인라인 진단 설정
 [editor.inline-diagnostics]
-cursor-line = "warning"           # 커서 줄의 진단 레벨
-other-lines = "hint"              # 다른 줄의 진단 레벨
+cursor-line = "warning"              # 커서 줄의 진단 레벨
+other-lines = "hint"                 # 다른 줄의 진단 레벨
 
 # LSP (Language Server Protocol) 설정
 [editor.lsp]
-display-inlay-hints = true        # 인레이 힌트 표시
-display-signature-help-docs = true # 시그니처 도움말 문서 표시
-snippets = true                   # 스니펫 지원
-auto-signature-help = true        # 자동 시그니처 도움말
+display-inlay-hints = true           # 인레이 힌트 표시
+display-signature-help-docs = true   # 시그니처 도움말 문서 표시
+snippets = true                      # 스니펫 지원
+auto-signature-help = true           # 자동 시그니처 도움말
 
 # 일반 모드 키 바인딩
 [keys.normal]
 # 줄 이동 키바인딩
-A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]      # Alt+Up: 현재 줄을 위로 이동
+A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]     # Alt+Up: 현재 줄을 위로 이동
 A-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]                    # Alt+Down: 현재 줄을 아래로 이동
 
-# 전체 선택
-C-a = ["goto_file_start", "select_mode", "goto_last_line", "goto_line_end", "normal_mode"]  # Ctrl+A: 전체 선택
+# 전체 선택 (기본 'x A-a' 또는 'gx A-a'가 더 헬릭스스럽다면 이 줄을 삭제 고려)
+C-a = ["goto_file_start", "select_mode", "goto_last_line", "goto_line_end", "normal_mode"] # Ctrl+A: 전체 선택
 
 # 복사 개선 (클립보드에도 복사)
-y = ["yank", "yank_to_clipboard"] # y: 클립보드에도 복사
+y = ["yank", "yank_to_clipboard"]    # y: 클립보드에도 복사
 
 # 줄 복제 키바인딩
-S-A-down = ["extend_to_line_bounds", "yank", "open_below", "normal_mode", "replace_with_yanked", "collapse_selection"]  # Shift+Alt+Down: 아래로 줄 복제
-S-A-up = ["extend_to_line_bounds", "yank", "open_above", "normal_mode", "replace_with_yanked", "collapse_selection"]    # Shift+Alt+Up: 위로 줄 복제
+S-A-down = ["extend_to_line_bounds", "yank", "open_below", "normal_mode", "replace_with_yanked", "collapse_selection"] # Shift+Alt+Down: 아래로 줄 복제
+S-A-up = ["extend_to_line_bounds", "yank", "open_above", "normal_mode", "replace_with_yanked", "collapse_selection"]   # Shift+Alt+Up: 위로 줄 복제
 
 # 버퍼 관리
-C-h = ":buffer-previous"          # Ctrl+H: 이전 버퍼로 이동
-C-l = ":buffer-next"              # Ctrl+L: 다음 버퍼로 이동
-C-w = ":buffer-close"             # Ctrl+W: 현재 버퍼 닫기
+C-h = ":buffer-previous"             # Ctrl+H: 이전 버퍼로 이동
+C-l = ":buffer-next"                 # Ctrl+L: 다음 버퍼로 이동
+C-w = ":buffer-close"                # Ctrl+W: 현재 버퍼 닫기
 
 # 스페이스 키 조합 (리더 키)
 [keys.normal.space]
-# f = ":format"                     # Space+F: 코드 포맷팅
-w = ":w"                          # Space+W: 파일 저장
-q = ":q"                          # Space+Q: 종료
-t = ":toggle soft-wrap.enable"    # Space+T: 소프트 랩 토글
+# f = ":format"                      # Space+F: 코드 포맷팅 (주석 처리된 것은 삭제 고려)
+w = ":w"                             # Space+W: 파일 저장
+q = ":q"                             # Space+Q: 종료
+t = ":toggle soft-wrap.enable"       # Space+T: 소프트 랩 토글
 
 # g 키 조합
 [keys.normal.g]
-a = "code_action"                 # gA: 코드 액션 실행
+a = "code_action"                    # gA: 코드 액션 실행
 
 # 삽입 모드 키 바인딩
 [keys.insert]
-C-s = ":w"                        # Ctrl+S: 저장
+C-s = ":w"                           # Ctrl+S: 저장
 
 # 삽입 모드에서 줄 복제
-S-A-down = ["normal_mode", "extend_to_line_bounds", "yank", "open_below", "replace_with_yanked", "collapse_selection"]  # Shift+Alt+Down: 아래로 줄 복제
-S-A-up = ["normal_mode", "extend_to_line_bounds", "yank", "open_above", "replace_with_yanked", "collapse_selection"]    # Shift+Alt+Up: 위로 줄 복제
+S-A-down = ["normal_mode", "extend_to_line_bounds", "yank", "open_below", "replace_with_yanked", "collapse_selection"] # Shift+Alt+Down: 아래로 줄 복제
+S-A-up = ["normal_mode", "extend_to_line_bounds", "yank", "open_above", "replace_with_yanked", "collapse_selection"]   # Shift+Alt+Up: 위로 줄 복제
 
 # 선택 모드 키 바인딩
 [keys.select]
-y = ["yank", "yank_to_clipboard", "normal_mode"]  # y: 선택 영역 복사 후 일반 모드로 복귀
+y = ["yank", "yank_to_clipboard", "normal_mode"] # y: 선택 영역 복사 후 일반 모드로 복귀
