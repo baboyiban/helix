@@ -1,0 +1,52 @@
+# 테마
+theme = "monokai"
+
+[editor]
+# 상대 줄 번호 사용
+line-number = "relative"
+# 상단에 버퍼(탭) 라인 항상 표시
+bufferline = "always"
+# 현재 커서가 있는 줄 강조
+cursorline = true
+# 자동 완성 팝업 활성화
+auto-completion = true
+# 저장 시 자동 포맷팅 활성화
+auto-format = true
+# 긴 줄 자동 줄바꿈
+soft-wrap.enable = true
+# 들여쓰기 가이드 표시
+indent-guides = { render = true, character = "┊", skip-levels = 1 }
+# 줄 끝에 표시할 진단 메시지 최소 레벨
+end-of-line-diagnostics = "hint"
+
+[editor.lsp]
+# 인레이 힌트 비활성화
+display-inlay-hints = false
+
+[editor.file-picker]
+# 숨김 파일 표시
+hidden = false
+# .gitignore 설정 존중
+git-ignore = true
+# 전역 .gitignore는 무시
+git-global = false
+
+[editor.cursor-shape]
+# 입력 모드
+insert = "bar"
+# 일반 모드
+normal = "block"
+# 선택 모드
+select = "underline"
+
+[keys.normal]
+# 현재 줄을 위로 이동
+A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+# 현재 줄을 아래로 이동
+A-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+# 'y'로 복사 시 시스템 클립보드에도 저장
+y = ["yank", "yank_to_clipboard"]
+# 아래로 줄 복제
+S-A-down = ["extend_to_line_bounds", "yank", "open_below", "normal_mode", "replace_with_yanked", "collapse_selection"]
+# 위로 줄 복제
+S-A-up = ["extend_to_line_bounds", "yank", "open_above", "normal_mode", "replace_with_yanked", "collapse_selection"]

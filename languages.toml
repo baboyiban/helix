@@ -1,0 +1,47 @@
+# ~/.config/helix/languages.toml
+
+# C/C++ 포맷터 설정
+[[language]]
+name = "c"
+formatter = { command = "clang-format", args = ["--style=file"] }
+
+[[language]]
+name = "cpp"
+formatter = { command = "clang-format", args = ["--style=file"] }
+
+# C/C++ 언어 서버 설정
+[language-server.clangd.config]
+fallbackFlags = ["-std=c17"]
+
+# Rust 포맷터 설정
+[[language]]
+name = "rust"
+formatter = { command = "rustfmt", args = ["--emit=stdout"] }
+
+# Go 포맷터 설정
+[[language]]
+name = "go"
+formatter = { command = "goimports" }
+
+# Python 설정
+[[language]]
+name = "python"
+auto-format = true
+
+# Python 포맷터 설정
+[language.formatter]
+command = "ruff"
+args = ["format", "-"]
+
+# Python 디버거 설정
+[language.debugger]
+name = "debugpy"
+transport = "stdio"
+command = "/Users/choidaruhan/.local/pipx/venvs/debugpy/bin/python"
+args = ["-m", "debugpy.adapter"]
+
+# Python 디버거 템플릿
+[[language.debugger.templates]]
+name = "Launch file"
+request = "launch"
+args = { program = "{relative_path}", console = "integratedTerminal", justMyCode = true }
